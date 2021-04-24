@@ -1,10 +1,26 @@
-.main{
-    color:cornflowerblue;
-    position: relative;
-    justify-content: space-around;
+
+.fuuut{
+    color:white;
+    font-family: "Rajdhani",sans-serif;
 }
 .footerbody,.footletts{
-    color:cornflowerblue;
-    background-color: transparent #2C0735;
+    display: grid;
+    background-color: #0f0212;
     font-family: 'Rajdhani', sans-serif;
+    position: fixed;
+    height: 100px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+li{
+    justify-self: center;
+    align-self: center;
+    list-style-type: none;
 }

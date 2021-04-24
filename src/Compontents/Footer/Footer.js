@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import 'Footer.css';
+import './Footer.css';
 
 export default function Footer () {
     return (
@@ -8,10 +8,10 @@ export default function Footer () {
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300+display=swap" rel="stylesheet"></link>
             <ul className="footletts">
-                <li><Link to='/'  className='user-link'>Profile</Link></li>
-                <li><Link to='/' className='user-link'> Log out</Link></li>
-                <li><a href="" className=''><b>Donate</b></a></li>
-                <li><Link to='/' className=''>About Us</Link></li>
+                <li className="fuuut"><Link to='/'  className='user-link'><b>Profile</b></Link></li>
+                <li className="fuuut"><Link to='/' className='user-link'> <b>Log out</b></Link></li>
+                <li className="fuuut"><a href="" className=''><b>Donate</b></a></li>
+                <li className="fuuut"><Link to='/' className=''><b>About Us</b></Link></li>
             </ul>
         </div>
     )

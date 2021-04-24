@@ -1,17 +1,38 @@
-h1,div{
+.questules{
     font-family: 'Rajdhani', sans-serif;
     color:rgb(46, 43, 38);
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-}
-ul{
-    list-style-type: none;
-}
-label{
-    color:rgb(197, 183, 161);
     background-color: papayawhip;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.hullabaloo{
+    position: relative;
+    height: 25px;
+    padding-right: 100px;
+    margin-left: -100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    border: transparent;
+    }
+
+label{
+    font-family: 'Rajdhani', sans-serif;
+    color:rgb(46,43,38);
+    background-color: papayawhip;
+    justify-self: space-between;
 }
 option{
     font-size: 10px;
+    font-family: 'Rajdhani', sans-serif;
     color: rgb(46, 43, 38);
+    background-color: peachpuff;
+    justify-content: center;
+}
+select{
+    font-size: larger;
 }
