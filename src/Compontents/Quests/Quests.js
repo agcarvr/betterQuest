@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
+import 'Quests.css';
 
 
 export default function Quest({data}){
@@ -75,6 +76,8 @@ export default function Quest({data}){
         <div>
 
             <h1>Your New Quest for Today</h1>
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300+display=swap" rel="stylesheet"></link>
             <form onSubmit={handleSubmit}>
                 <label for='quest'>what stat did your quest enhance today? </label>
                 <select id='quest' name='quest' value={statValue} onChange={handleChangeStat}>

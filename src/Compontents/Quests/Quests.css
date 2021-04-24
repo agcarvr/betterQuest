@@ -1,0 +1,15 @@
+h1,div{
+    font-family: 'Rajdhani', sans-serif;
+    color:rgb(46, 43, 38);
+}
+ul{
+    list-style-type: none;
+}
+label{
+    color:rgb(197, 183, 161);
+    background-color: papayawhip;
+}
+option{
+    font-size: 10px;
+    color: rgb(46, 43, 38);
+}

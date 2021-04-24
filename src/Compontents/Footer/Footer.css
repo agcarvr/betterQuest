@@ -1,0 +1,10 @@
+.main{
+    color:cornflowerblue;
+    position: relative;
+    justify-content: space-around;
+}
+.footerbody,.footletts{
+    color:cornflowerblue;
+    background-color: transparent #2C0735;
+    font-family: 'Rajdhani', sans-serif;
+}
