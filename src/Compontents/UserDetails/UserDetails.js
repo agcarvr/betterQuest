@@ -10,7 +10,7 @@ export default function UserDetails({ data }) {
             <p><b>Endurance:</b> {data.users.endurance}</p>
             <p><b>Wisdom:</b> {data.users.wisdom}</p>
             
-            <h3>I wonder how much you will improve today!</h3>
+            <h3>How will you better yourself today?</h3>
             
         </div>
     )
