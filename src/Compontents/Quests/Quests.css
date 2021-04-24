@@ -1,6 +1,8 @@
 h1,div{
     font-family: 'Rajdhani', sans-serif;
     color:rgb(46, 43, 38);
+    justify-content: space-around;
+    align-items: center;
 }
 ul{
     list-style-type: none;
