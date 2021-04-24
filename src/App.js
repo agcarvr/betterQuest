@@ -15,22 +15,25 @@ const data = {
     "wisdom": "10",
     "quests": [
       {
-        "quest1": {
+        // "quest1": {
           "type": "Walking",
-          "time": "5"
-        }
+          "time": "5",
+          "stat": 'Endurance'
+        // }
       },
       {
-        "quest2": {
+        // "quest2": {
           "type": "Studying",
-          "time": "30"
-        }
+          "time": "30",
+          "stat": "Wisdom"
+        // }
       },
       {
-        "quest2": {
+        // "quest2": {
           "type": "Biking",
-          "time": "15"
-        }
+          "time": "15",
+          "stat": "Strength"
+        // }
       }
     ]
   }
@@ -38,6 +41,23 @@ const data = {
 
 
 function App() {
+
+  const [request, setRequest] = useState({});
+
+  const makeAPICall = async () =>{
+    try{
+      const res = await fetch('');
+      const apiData = await res.json();
+      setRequest(apiData)
+    } catch(err){
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    makeAPICall()
+  },[])
+
   return (
     <div className="App">
       
