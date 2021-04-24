@@ -30,10 +30,14 @@ export default function Quest({data}){
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        
         if(statValue === 'strength'){
             let numStat = parseInt(timeValue)
             let numUserStat = parseInt(data.users.strength)
             let newStat = (numStat / 30 * 5 ) + numUserStat
+            if (newStat >= 40){
+                newStat = 40
+            }
             data.users.strength = newStat.toString()
             console.log(`new strength:${data.users.strength}`)
         }
@@ -42,6 +46,9 @@ export default function Quest({data}){
             let numStat = parseInt(timeValue)
             let numUserStat = parseInt(data.users.endurance)
             let newStat = (numStat / 30 * 5 ) + numUserStat
+            if (newStat >= 40){
+                newStat = 40
+            }
             data.users.endurance = newStat.toString()
             console.log(`new endurance:${data.users.endurance}`)
         }
@@ -49,6 +56,9 @@ export default function Quest({data}){
             let numStat = parseInt(timeValue)
             let numUserStat = parseInt(data.users.wisdom)
             let newStat = (numStat / 30 * 5 ) + numUserStat
+            if (newStat >= 40){
+                newStat = 40
+            }
             data.users.wisdom = newStat.toString()
             console.log(`new wisdom:${data.users.wisdom}`)
         }
