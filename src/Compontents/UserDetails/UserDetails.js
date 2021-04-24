@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import styles from './UserDetails.modules.css';
 
 export default function UserDetails({ data }) {
     return(
