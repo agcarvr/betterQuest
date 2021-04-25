@@ -1,6 +1,15 @@
-@media only screen and (min-width: 768px) {
-    aside {
-       width: 30%;
-       height: 100%;
-     }
- }
+.nav-bar{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 3px;
+  border-radius: 2em;
+  color: rgba(247, 122, 158,1);
+  background-color: rgba(81, 55, 112, 1);
+  
+}
