@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu+Mono&display=swap');
+
 .mainlogo{
     display: flex;
     justify-content: center;
@@ -7,14 +9,15 @@
     display: flex;
     justify-content: center;
     color:whitesmoke;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 800;
    
    
 }
 
 .logo-app-name{
     animation-name: fun-animation;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
 
 
@@ -22,3 +25,10 @@
     from{opacity:0}
     to{opacity: 0.5}
 }
+
+@media only screen and (min-width: 768px) {
+    aside {
+       width: 30%;
+       height: 100%;
+     }
+ }

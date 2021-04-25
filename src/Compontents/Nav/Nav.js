@@ -6,8 +6,10 @@ export default function Nav (){
     return(
         <div className='nav-bar'>
             <Link to='/' className={styles.main}>
+           
                 <div className='header' >Better Quest</div>
             </Link>
         </div>
     )
 }
+
