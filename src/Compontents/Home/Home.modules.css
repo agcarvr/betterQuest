@@ -1,0 +1,12 @@
+.mainlogo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-app-name, .user-link, .quests-link{
+    display: flex;
+    justify-content: center;
+    color:whitesmoke;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+}

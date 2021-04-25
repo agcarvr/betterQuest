@@ -6,6 +6,7 @@ import styles from './Quests.modules.css';
 export default function Quest({data}){
     console.log(` users strength:${data.users.strength} users wisdom:${data.users.wisdom} users endurance${data.users.endurance}`)
     
+    //thanks
     const scrollbox = {
     height:'120px',
     width:'100vw',

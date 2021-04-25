@@ -5,7 +5,7 @@ export default function Home (){
     return(
         <div>
            
-            <div>
+            <div className='mainlogo'>
             <img src="https://i.imgur.com/OF63QJV.png" width="200" height="200" className="app-logo" alt="betterQuest-app-logo" />
             </div>
             <div>
