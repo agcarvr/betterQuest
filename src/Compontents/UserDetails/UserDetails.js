@@ -6,9 +6,9 @@ export default function UserDetails({ data }) {
 
         <div>
              <img src="https://i.imgur.com/OF63QJV.png" width="200" height="200" className="app-logo" alt="betterQuest-app-logo" />
-            <h1 className='hey-there'>Hey There, {data.users.username}!</h1>
+            <h1 className='hey-there'>|~ Hey There, {data.users.username}! ~|</h1>
             
-            <h3><u>Here are your current stats:</u></h3>
+            <h3 classname='stat-info'><u>Here are your current stats:</u></h3>
             
             <p><b>Strength:</b> {data.users.strength}</p>
             <p><b>Endurance:</b> {data.users.endurance}</p>

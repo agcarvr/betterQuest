@@ -8,9 +8,11 @@
 .logo-app-name, .user-link, .quests-link{
     display: flex;
     justify-content: center;
+    text-align: center;
     color:whitesmoke;
     font-family: 'Ubuntu Mono', monospace;
     font-weight: 800;
+
    
    
 }
