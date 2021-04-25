@@ -5,16 +5,31 @@
     justify-content: center;
 }
 
-.logo-app-name, .user-link, .quests-link{
+.logo-app-name{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     color:whitesmoke;
     font-family: 'Ubuntu Mono', monospace;
-    font-weight: 800;
+    font-weight: 800;   
+}
 
-   
-   
+.home-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.user-link, .quests-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    justify-content: center;
+    text-align: center;
+    
 }
 
 .logo-app-name{
