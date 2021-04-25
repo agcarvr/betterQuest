@@ -11,8 +11,10 @@ export default function Home (){
             </div>
             <div className='home-body'>
             <h1 className="logo-app-name">~ Welcome to your Real Life State Tracker ~</h1>
+            <div className='link-div-home'>
             <Link to='/userdetails'  className='user-link'><div>Profile</div></Link>
             <Link to='/quests' className='quests-link'> <div>Quests</div></Link>
+            </div>
             </div>
             
         </div>
