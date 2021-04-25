@@ -5,9 +5,7 @@ body {
   height: 100%;
 }
 
-.App{
+.nav-bar{
   display: flex;
   justify-content: baseline;
-  color:whitesmoke;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }

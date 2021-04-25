@@ -9,4 +9,16 @@
     color:whitesmoke;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
    
+   
+}
+
+.logo-app-name{
+    animation-name: fun-animation;
+    animation-duration: 4s;
+}
+
+
+@keyframes fun-animation{
+    from{opacity:0}
+    to{opacity: 0.5}
 }
