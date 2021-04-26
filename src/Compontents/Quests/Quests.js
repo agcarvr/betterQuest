@@ -11,10 +11,8 @@ export default function Quest({data}){
     //thanks
     const scrollbox = {
     height:'120px',
-    width:'100vw',
     border:'1px solid #ccc',
-    font: '16px/26px Georgia, Garamond, Serif',
-    overflow:'auto'};
+    font: '16px/26px Georgia, Garamond, Serif'};
 
     const [typeValue, setTypeValue] = useState("");
     const [timeValue, setTimeValue] = useState('');
@@ -81,6 +79,7 @@ export default function Quest({data}){
             <Sound
                url={QuestTheme}
                playStatus={Sound.status.PLAYING}
+               volume={3}
             >
             </Sound>
 
@@ -104,7 +103,7 @@ export default function Quest({data}){
                 
             </form> 
             <h1 className={styles.username}>{data.users.username}'s Quests</h1>
-            <ul style={scrollbox} className="foob">
+            <ul style={scrollbox} className={styles.info}>
                 {data.users.quests.map((quest, i) => {
                     return(
                         <li className={styles.levelup} style={{listStyleType: 'none'}} key={i}>

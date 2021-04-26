@@ -9,7 +9,9 @@ export default function Home (){
         <div>
             <Sound
             url={TownTheme}
-            playStatus={Sound.status.PLAYING}>
+            playStatus={Sound.status.PLAYING}
+            volume={3}
+            loop={true}>
 
             </Sound>
            

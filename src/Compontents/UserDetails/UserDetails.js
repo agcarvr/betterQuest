@@ -10,7 +10,8 @@ export default function UserDetails({ data }) {
 
             <Sound
             url={Winds}
-            playStatus={Sound.status.PLAYING}>
+            playStatus={Sound.status.PLAYING}
+            volume={3}>
             </Sound>
             
              {/* <img src="https://i.imgur.com/OF63QJV.png" width="200" height="200" className="app-logo" alt="betterQuest-app-logo" /> */}

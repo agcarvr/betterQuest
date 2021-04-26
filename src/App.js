@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <Nav/>
       <main>
       
@@ -70,6 +70,13 @@ function App() {
         
       </main>
       <Footer/>
+
+      <div>
+        <video id='video-bg' className='videobg' poster='' autoPlay muted loop>
+          <source src='https://i.imgur.com/JhnEtxV.mp4' type='video/mp4' />
+        </video>
+      </div>
+
     </div>
   );
 }
