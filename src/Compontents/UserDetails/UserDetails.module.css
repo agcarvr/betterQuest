@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu+Mono&display=swap');
 
-.hey-there{
+.userheader{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,9 +13,28 @@
 }
 
 .UserDetails{
-    color:red;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color:whitesmoke;
+    font-family: 'Ubuntu Mono', monospace; 
+    text-transform: uppercase;
+    line-height: 50px;
 }
+
+.UserGains{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color:whitesmoke;
+    font-family: 'Ubuntu Mono', monospace; 
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
 
 .title-info{
     display: flex;
@@ -27,6 +46,28 @@
 .title-app-name{
     animation-name: fun-animation;
     animation-duration: 3s;
+}
+
+.linkdivhome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questlink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30px;
+    width: 300px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: small;
+    border-radius: 2em;
+    color: rgba(247, 122, 158,1);
+    background-color: rgba(81, 55, 112, 1);
 }
 
 
