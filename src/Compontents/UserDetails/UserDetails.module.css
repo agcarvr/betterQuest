@@ -35,6 +35,10 @@
     line-height: 50px;
 }
 
+.box{
+    background-color:purple ;
+}
+
 
 .title-info{
     display: flex;
