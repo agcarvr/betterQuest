@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-.logo-app-name{
+.logoappname{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,14 +15,14 @@
     font-weight: 800;   
 }
 
-.home-body{
+.homebody{
     display: flex;
     flex-direction: column;
     align-items: center;
     
 }
 
-.user-link, .quests-link{
+.userlink, .questslink{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,23 +38,39 @@
    
 }
 
-.link-div-home{
+.linkdivhome{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 90px;
 }
 
-.logo-app-name{
-    animation-name: fun-animation;
+.logoappname{
+    animation-name: funanimation;
     animation-duration: 3s;
 }
 
 
-@keyframes fun-animation{
+@keyframes funanimation{
     from{opacity:0}
     to{opacity: 0.5}
+
+    0% {
+        -webkit-transform: scale(0.9);
+        transform:scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        transform:scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        transform:scale(0.9);
+    }
 }
+
 
 @media only screen and (min-width: 768px) {
     aside {
