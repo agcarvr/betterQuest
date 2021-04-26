@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
-<<<<<<< HEAD
-import styles from './Quests.modules.css';
-=======
 import styles from './Quests.module.css';
->>>>>>> 8eb60008c82b7862a1f0b014ec9c32cd9b620c89
 
 
 export default function Quest({data}){
