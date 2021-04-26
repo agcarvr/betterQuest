@@ -1,10 +1,18 @@
 import {Link} from 'react-router-dom'
+import Sound from 'react-sound';
+import Winds from '../../sounds/WindsOfStories.mp3'
 import styles from './UserDetails.module.css';
 
 export default function UserDetails({ data }) {
     return(
 
         <div>
+
+            <Sound
+            url={Winds}
+            playStatus={Sound.status.PLAYING}>
+            </Sound>
+            
              {/* <img src="https://i.imgur.com/OF63QJV.png" width="200" height="200" className="app-logo" alt="betterQuest-app-logo" /> */}
             <h1 className={styles.userheader}>|~ Hey There, {data.users.username}! ~|</h1>
             
