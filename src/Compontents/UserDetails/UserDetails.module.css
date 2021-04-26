@@ -33,19 +33,19 @@
     font-family: 'Ubuntu Mono', monospace; 
     text-transform: uppercase;
     line-height: 50px;
+    
 }
 
-.box{
-    background-color:purple ;
+.surrounding{
+    background-color: rgba(247, 122, 158,0.45);
 }
 
-
-.title-info{
+/* .title-info{
     display: flex;
     flex-direction: column;
     align-items: center;
 
-}
+} */
 
 .title-app-name{
     animation-name: fun-animation;

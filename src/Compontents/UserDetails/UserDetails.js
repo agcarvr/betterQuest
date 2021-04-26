@@ -8,7 +8,7 @@ export default function UserDetails({ data }) {
              {/* <img src="https://i.imgur.com/OF63QJV.png" width="200" height="200" className="app-logo" alt="betterQuest-app-logo" /> */}
             <h1 className={styles.userheader}>|~ Hey There, {data.users.username}! ~|</h1>
             
-            <div className={styles.box}>
+            <div className={styles.surrounding}>
             <h3><u className={styles.UserDetails}>Here are your current stats:</u></h3>
             
             <p className={styles.UserGains}><b>Strength:</b> {data.users.strength}</p>
