@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
+import Sound from 'react-sound';
+import QuestTheme from '../../sounds/happy.mp3';
 import styles from './Quests.module.css';
 
 
@@ -75,6 +77,12 @@ export default function Quest({data}){
 
     return(
         <div className={styles.questules}>
+
+            <Sound
+               url={QuestTheme}
+               playStatus={Sound.status.PLAYING}
+            >
+            </Sound>
 
             <h1 className={styles.questheading}>Your New Quest for Today</h1>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
