@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import "../../Spritework/GUIDe.png";
-import styles from './Footer.css';
+import styles from './Footer.modules.css';
 
 export default function Footer () {
     return (
