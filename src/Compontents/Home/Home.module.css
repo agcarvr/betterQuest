@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu+Mono&display=swap');
+
+.mainlogo{
+    display: flex;
+    justify-content: center;
+}
+
+.logoappname{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color:whitesmoke;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 800;   
+}
+
+.homebody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.userlink, .questslink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 5px;
+    border-radius: 2em;
+    color: rgba(247, 122, 158,1);
+    background-color: rgba(81, 55, 112, 1);
+   
+}
+
+.linkdivhome{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.logoappname{
+    animation-name: funanimation;
+    animation-duration: 3s;
+}
+
+
+@keyframes funanimation{
+    from{opacity:0}
+    to{opacity: 0.5}
+
+    0% {
+        -webkit-transform: scale(0.9);
+        transform:scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        transform:scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        transform:scale(0.9);
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    aside {
+       width: 30%;
+       height: 100%;
+     }
+ }
