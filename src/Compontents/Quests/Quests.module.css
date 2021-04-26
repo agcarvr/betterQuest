@@ -1,0 +1,46 @@
+.questules{
+    font-family: 'Rajdhani', sans-serif;
+    color:rgb(46, 43, 38);
+    justify-content: center;
+    align-items: center;
+    background-color: papayawhip;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.username{
+    margin-top: auto;
+    padding-top: 40px;
+    color:rgb(46, 43, 38);
+    font-family: 'Rajdhani', sans-serif;
+}
+.levelup{
+    font-family: 'Rajdhani', sans-serif;
+    position: relative;
+    height: 25px;
+    padding-right: 100px;
+    margin-left: -100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    border: transparent;
+    }
+
+.questions{
+    font-family: 'Rajdhani', sans-serif;
+    color:rgb(46,43,38);
+    background-color: papayawhip;
+    justify-self: space-between;
+}
+
+.gains{
+    font-size: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    color: rgb(46, 43, 38);
+    background-color: peachpuff;
+    justify-content: center;
+}
+.questname{
+    font-size: larger;
+}
