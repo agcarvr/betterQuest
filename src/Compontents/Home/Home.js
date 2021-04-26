@@ -7,7 +7,7 @@ export default function Home (){
         <div>
            
             <div className={styles.mainlogo}>
-            <img src="https://i.imgur.com/OF63QJV.png" width="200" height="200" className="app-logo" alt="betterQuest-app-logo" />
+            {/* <img src="https://i.imgur.com/OF63QJV.png" width="200" height="200" className="app-logo" alt="betterQuest-app-logo" /> */}
             </div>
             <div className={styles.homebody}>
             <h1 className={styles.logoappname}>~ Welcome to your Real Life State Tracker ~</h1>
