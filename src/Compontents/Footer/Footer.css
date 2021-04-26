@@ -25,3 +25,8 @@ li{
     align-self: center;
     list-style-type: none;
 }
+.Guide{
+    position: relative;
+    left: 0;
+    
+}

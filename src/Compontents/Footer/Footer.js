@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import "../../Spritework/GUIDe.png";
 import styles from './Footer.css';
 
 export default function Footer () {
@@ -12,6 +13,7 @@ export default function Footer () {
                 <li className="fuuut"><Link to='/' className='user-link'> <b>Log out</b></Link></li>
                 <li className="fuuut"><a href="" className=''><b>Donate</b></a></li>
                 <li className="fuuut"><Link to='/' className=''><b>About Us</b></Link></li>
+            <img src="../../Spritework/GUIDe.png" className="Guide"></img>
             </ul>
         </div>
     )
