@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
-import './Quests.css';
+import styles from './Quests.nodules.css';
 
 
 export default function Quest({data}){
@@ -75,7 +75,7 @@ export default function Quest({data}){
     return(
         <div className="questules">
 
-            <h1>Your New Quest for Today</h1>
+            <h1 className="hoi">Your New Quest for Today</h1>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300+display=swap" rel="stylesheet"></link>
             <form onSubmit={handleSubmit}>
@@ -94,7 +94,7 @@ export default function Quest({data}){
 
                 
             </form> 
-            <h1>{data.users.username}'s Quests</h1>
+            <h1 className="hoi">{data.users.username}'s Quests</h1>
             <ul style={scrollbox} className="foob">
                 {data.users.quests.map((quest, i) => {
                     return(
