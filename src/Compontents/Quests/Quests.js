@@ -73,11 +73,13 @@ export default function Quest({data}){
     console.log(typeValue, timeValue, statValue)
 
     return(
-        <div>
+        <div className="questules">
 
-            <h1>Your New Quest for Today</h1>
+            <h1 className="hoi">Your New Quest for Today</h1>
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300+display=swap" rel="stylesheet"></link>
             <form onSubmit={handleSubmit}>
-                <label for='quest'>what stat did your quest enhance today? </label>
+                <label for='quest'>What stat did your quest enhance today? </label>
                 <select id='quest' name='quest' value={statValue} onChange={handleChangeStat}>
                     <option value='null'>  </option>
                     <option value='endurance' >Endurance</option>
@@ -92,11 +94,11 @@ export default function Quest({data}){
 
                 
             </form> 
-            <h1>{data.users.username}'s Quests</h1>
-            <ul style={scrollbox}>
+            <h1 className="hoi">{data.users.username}'s Quests</h1>
+            <ul style={scrollbox} className="foob">
                 {data.users.quests.map((quest, i) => {
                     return(
-                        <li style={{listStyleType: 'none'}} key={i}>
+                        <li className="hullabaloo" style={{listStyleType: 'none'}} key={i}>
                             {data.users.username} leveled up their {quest.stat} while {quest.type} for {quest.time} minutes
                         </li>
                     )
