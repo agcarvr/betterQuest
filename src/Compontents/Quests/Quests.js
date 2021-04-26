@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
-<<<<<<< HEAD
-import styles from './Quests.modules.css';
-=======
-import styles from './Quests.modules.css';
->>>>>>> eccec0c79fa5418bec89c138eff7733c0fa0569b
+import styles from './Quests.module.css';
 
 
 export default function Quest({data}){
     console.log(` users strength:${data.users.strength} users wisdom:${data.users.wisdom} users endurance${data.users.endurance}`)
     
+    //thanks
     const scrollbox = {
     height:'120px',
     width:'100vw',
@@ -77,32 +74,32 @@ export default function Quest({data}){
     console.log(typeValue, timeValue, statValue)
 
     return(
-        <div className="questules">
+        <div className={styles.questules}>
 
-            <h1 className="hoi">Your New Quest for Today</h1>
+            <h1 className={styles.questheading}>Your New Quest for Today</h1>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300+display=swap" rel="stylesheet"></link>
             <form onSubmit={handleSubmit}>
-                <label for='quest'>What stat did your quest enhance today? </label>
-                <select id='quest' name='quest' value={statValue} onChange={handleChangeStat}>
-                    <option value='null'>  </option>
-                    <option value='endurance' >Endurance</option>
-                    <option value='wisdom'>Wisdom</option>
-                    <option value='strength'>Strength</option>
+                <label className={styles.questions} for='quest'>What stat did your quest enhance today? </label>
+                <select className={styles.questname} id='quest' name='quest' value={statValue} onChange={handleChangeStat}>
+                    <option className={styles.gains} value='null'>  </option>
+                    <option className={styles.gains} value='endurance' >Endurance</option>
+                    <option className={styles.gains} value='wisdom'>Wisdom</option>
+                    <option className={styles.gains} value='strength'>Strength</option>
                 </select><br/>
-                <label for='quest-detail'>What did you do on your quest?</label>
+                <label className={styles.questions} for='quest-detail'>What did you do on your quest?</label>
                 <input type='text' id='quest-detial' value={typeValue} onChange={handleChangeType}></input><br/>
-                <label for='duration'>How long were you questing? (in minutes) </label>
+                <label className={styles.questions} for='duration'>How long were you questing? (in minutes) </label>
                 <input type='text' id='time' value={timeValue} onChange={handleChangeTime}></input><br/>
                 <input type='submit' value='Declare your Quest'/>
 
                 
             </form> 
-            <h1 className="hoi">{data.users.username}'s Quests</h1>
+            <h1 className={styles.username}>{data.users.username}'s Quests</h1>
             <ul style={scrollbox} className="foob">
                 {data.users.quests.map((quest, i) => {
                     return(
-                        <li className="hullabaloo" style={{listStyleType: 'none'}} key={i}>
+                        <li className={styles.levelup} style={{listStyleType: 'none'}} key={i}>
                             {data.users.username} leveled up their {quest.stat} while {quest.type} for {quest.time} minutes
                         </li>
                     )
