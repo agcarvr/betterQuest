@@ -4,7 +4,7 @@ import styles from './Quests.modules.css';
 
 
 export default function Quest({data}){
-    console.log(` users strength:${data.users.strength} users wisdom:${data.users.wisdom} users endurance${data.users.endurance}`)
+    // console.log(` users strength:${data.strength[0]} users wisdom:${data.users.wisdom} users endurance${data.users.endurance}`)
     
     const scrollbox = {
     height:'120px',
@@ -69,8 +69,8 @@ export default function Quest({data}){
         setStatValue('');
     };
     
-    console.log(data.users.quests)
-    console.log(typeValue, timeValue, statValue)
+    // console.log(data.users.quests)
+    // console.log(typeValue, timeValue, statValue)
 
     return(
         <div className="questules">
@@ -94,8 +94,8 @@ export default function Quest({data}){
 
                 
             </form> 
-            <h1 className="hoi">{data.users.username}'s Quests</h1>
-            <ul style={scrollbox} className="foob">
+            <h1 className="hoi">{data.username}'s Quests</h1>
+            {/* <ul style={scrollbox} className="foob">
                 {data.users.quests.map((quest, i) => {
                     return(
                         <li className="hullabaloo" style={{listStyleType: 'none'}} key={i}>
@@ -103,7 +103,7 @@ export default function Quest({data}){
                         </li>
                     )
                 })}
-            </ul>
+            </ul> */}
             <Link to='/userdetails'>Profile</Link>
         </div>
     )

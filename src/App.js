@@ -46,8 +46,9 @@ function App() {
 
   const makeAPICall = async () =>{
     try{
-      const res = await fetch('');
+      const res = await fetch('http://127.0.0.1:8000/user/1/');
       const apiData = await res.json();
+      console.log({apiData})
       setRequest(apiData)
     } catch(err){
       console.log(err)
@@ -66,7 +67,7 @@ function App() {
       
         <Route path='/' exact render={() => <Home />}/>
         <Route path='/userdetails' render={() => <UserDetails data={data}/>}/>
-        <Route path='/quests' render={() => <Quest data={data}/>}/>
+        <Route path='/quests' render={() => <Quest data={request}/>}/>
         
       </main>
       <Footer/>
