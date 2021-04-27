@@ -7,7 +7,7 @@ export default function Nav (){
         <div className={styles.navbar}>
             <Link to='/' className={styles.main}>
                 <div className={styles.header} >
-                    <img src='https://i.imgur.com/8tim8Na.png' width="200" height="200" className="app-logo" alt="betterQuest-app-logo" ></img>
+                    <img src='https://i.imgur.com/RS4EHIw.png' width="300" height="300" className="app-logo" alt="betterQuest-app-logo" ></img>
                 </div>
             </Link>
         </div>
