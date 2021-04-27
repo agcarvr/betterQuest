@@ -6,6 +6,7 @@
     background-color: papayawhip;
     margin-left: 100px;
     margin-right: 100px;
+    padding: 30px;
 }
 .username{
     margin-top: auto;
@@ -13,13 +14,21 @@
     color:rgb(46, 43, 38);
     font-family: 'Rajdhani', sans-serif;
 }
+
+.info {
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    padding: 0;
+}
+
 .levelup{
     font-family: 'Rajdhani', sans-serif;
     position: relative;
-    height: 25px;
-    padding-right: 100px;
-    margin-left: -100px;
-    margin-right: 100px;
+    /* height: 25px; */
+    /* padding-right: 100px; */
+    /* margin-left: -100px;
+    margin-right: 100px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

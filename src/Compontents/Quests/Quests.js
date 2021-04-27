@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
+import Sound from 'react-sound';
+import QuestTheme from '../../sounds/happy.mp3';
 import styles from './Quests.module.css';
 
 
@@ -9,10 +11,8 @@ export default function Quest({data}){
     //thanks
     const scrollbox = {
     height:'120px',
-    width:'100vw',
     border:'1px solid #ccc',
-    font: '16px/26px Georgia, Garamond, Serif',
-    overflow:'auto'};
+    font: '16px/26px Georgia, Garamond, Serif'};
 
     const [typeValue, setTypeValue] = useState("");
     const [timeValue, setTimeValue] = useState('');
@@ -76,6 +76,13 @@ export default function Quest({data}){
     return(
         <div className={styles.questules}>
 
+            <Sound
+               url={QuestTheme}
+               playStatus={Sound.status.PLAYING}
+               volume={3}
+            >
+            </Sound>
+
             <h1 className={styles.questheading}>Your New Quest for Today</h1>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300+display=swap" rel="stylesheet"></link>
@@ -96,7 +103,7 @@ export default function Quest({data}){
                 
             </form> 
             <h1 className={styles.username}>{data.users.username}'s Quests</h1>
-            <ul style={scrollbox} className="foob">
+            <ul style={scrollbox} className={styles.info}>
                 {data.users.quests.map((quest, i) => {
                     return(
                         <li className={styles.levelup} style={{listStyleType: 'none'}} key={i}>

@@ -1,5 +1,17 @@
+
+#video-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
 body {
-  background-image: url('./images/highway-sky.png');
+  background-image: url('https://media1.giphy.com/media/Bmsd0lmn6ZpbaTyhQM/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -11,4 +23,6 @@ body {
   display: flex;
   justify-content: baseline;
 }
+
+
 
