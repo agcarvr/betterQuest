@@ -46,10 +46,11 @@ function App() {
 
   const makeAPICall = async () =>{
     try{
-      const res = await fetch('http://127.0.0.1:8000/user/1/');
+      const res = await fetch('https://betterquest-api.herokuapp.com/user/1/');
       const apiData = await res.json();
-      console.log({apiData})
+      console.log(apiData)
       setRequest(apiData)
+      console.log(request)
     } catch(err){
       console.log(err)
     }
@@ -61,16 +62,23 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <Nav/>
       <main>
       
         <Route path='/' exact render={() => <Home />}/>
-        <Route path='/userdetails' render={() => <UserDetails data={data}/>}/>
+        <Route path='/userdetails' render={() => <UserDetails request={request}/>}/>
         <Route path='/quests' render={() => <Quest data={request}/>}/>
         
       </main>
       <Footer/>
+
+      <div>
+        <video id='video-bg' className='videobg' poster='' autoPlay muted loop>
+          <source src='https://i.imgur.com/JhnEtxV.mp4' type='video/mp4' />
+        </video>
+      </div>
+
     </div>
   );
 }
