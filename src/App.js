@@ -46,9 +46,11 @@ function App() {
 
   const makeAPICall = async () =>{
     try{
-      const res = await fetch('');
+      const res = await fetch('https://betterquest-api.herokuapp.com/user/1/');
       const apiData = await res.json();
+      console.log(apiData)
       setRequest(apiData)
+      console.log(request)
     } catch(err){
       console.log(err)
     }
@@ -65,8 +67,8 @@ function App() {
       <main>
       
         <Route path='/' exact render={() => <Home />}/>
-        <Route path='/userdetails' render={() => <UserDetails data={data}/>}/>
-        <Route path='/quests' render={() => <Quest data={data}/>}/>
+        <Route path='/userdetails' render={() => <UserDetails request={request}/>}/>
+        <Route path='/quests' render={() => <Quest data={request}/>}/>
         
       </main>
       <Footer/>

@@ -6,17 +6,25 @@ import styles from './Quests.module.css';
 
 
 export default function Quest({data}){
-    console.log(` users strength:${data.users.strength} users wisdom:${data.users.wisdom} users endurance${data.users.endurance}`)
+    // console.log(` users strength:${data.strength[0]} users wisdom:${data.users.wisdom} users endurance${data.users.endurance}`)
     
     //thanks
     const scrollbox = {
     height:'120px',
     border:'1px solid #ccc',
-    font: '16px/26px Georgia, Garamond, Serif'};
+    font: '16px/26px Georgia, Garamond, Serif',
+    width:'40vw',
+    overflow:'auto'};
 
     const [typeValue, setTypeValue] = useState("");
     const [timeValue, setTimeValue] = useState('');
     const [statValue, setStatValue] = useState('');
+    const [newQuest, setNewQuest] = useState({
+        "name": 'https://betterquest-api.herokuapp.com/user/1/',
+        "stat": "",
+        "total": "",
+        "kind": ""
+      });
     
     
 
@@ -24,54 +32,76 @@ export default function Quest({data}){
     const handleChangeTime = (e) => setTimeValue(e.target.value);
     const handleChangeStat = (e) => setStatValue(e.target.value);
 
-    let newQuest = {
-        "type": typeValue,
-        "time": timeValue,
-        "stat": statValue,
-    };
+    // let newQuest = {
+    //     "type": typeValue,
+    //     "time": timeValue,
+    //     "stat": statValue,
+    // };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        if(statValue === 'strength'){
-            let numStat = parseInt(timeValue)
-            let numUserStat = parseInt(data.users.strength)
-            let newStat = (numStat / 30 * 5 ) + numUserStat
-            if (newStat >= 40){
-                newStat = 40
-            }
-            data.users.strength = newStat.toString()
-            console.log(`new strength:${data.users.strength}`)
-        }
-        if(statValue === 'endurance' || statValue === ''){
-            setStatValue('endurance')
-            let numStat = parseInt(timeValue)
-            let numUserStat = parseInt(data.users.endurance)
-            let newStat = (numStat / 30 * 5 ) + numUserStat
-            if (newStat >= 40){
-                newStat = 40
-            }
-            data.users.endurance = newStat.toString()
-            console.log(`new endurance:${data.users.endurance}`)
-        }
-        if(statValue === 'wisdom'){
-            let numStat = parseInt(timeValue)
-            let numUserStat = parseInt(data.users.wisdom)
-            let newStat = (numStat / 30 * 5 ) + numUserStat
-            if (newStat >= 40){
-                newStat = 40
-            }
-            data.users.wisdom = newStat.toString()
-            console.log(`new wisdom:${data.users.wisdom}`)
-        }
-        data.users.quests.unshift(newQuest);
+        try {
+            setNewQuest({
+                name: 'https://betterquest-api.herokuapp.com/user/1/',
+                "stat": statValue,
+                "total": timeValue,
+                "kind": typeValue
+            });
+            const response = await fetch(
+              "https://betterquest-api.herokuapp.com/quest/",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newQuest)
+              }
+            );
+            const data = await response.json();
+            // setTodos([..., data]);
+          } catch (error) {
+            console.error(error);
+          }
+        // if(statValue === 'strength'){
+        //     let numStat = parseInt(timeValue)
+        //     let numUserStat = parseInt(data.users.strength)
+        //     let newStat = (numStat / 30 * 5 ) + numUserStat
+        //     if (newStat >= 40){
+        //         newStat = 40
+        //     }
+        //     data.users.strength = newStat.toString()
+        //     console.log(`new strength:${data.users.strength}`)
+           
+        // }
+        // if(statValue === 'endurance' || statValue === ''){
+        //     setStatValue('endurance')
+        //     let numStat = parseInt(timeValue)
+        //     let numUserStat = parseInt(data.users.endurance)
+        //     let newStat = (numStat / 30 * 5 ) + numUserStat
+        //     if (newStat >= 40){
+        //         newStat = 40
+        //     }
+        //     data.users.endurance = newStat.toString()
+        //     console.log(`new endurance:${data.users.endurance}`)
+        // }
+        // if(statValue === 'wisdom'){
+        //     let numStat = parseInt(timeValue)
+        //     let numUserStat = parseInt(data.users.wisdom)
+        //     let newStat = (numStat / 30 * 5 ) + numUserStat
+        //     if (newStat >= 40){
+        //         newStat = 40
+        //     }
+        //     data.users.wisdom = newStat.toString()
+        //     console.log(`new wisdom:${data.users.wisdom}`)
+        // }
+        // data.users.quests.unshift(newQuest);
         setTypeValue('');
         setTimeValue('');
         setStatValue('');
     };
     
-    console.log(data.users.quests)
-    console.log(typeValue, timeValue, statValue)
+    // console.log(data.users.quests)
+    // console.log(typeValue, timeValue, statValue)
 
     return(
         <div className={styles.questules}>
@@ -102,16 +132,16 @@ export default function Quest({data}){
 
                 
             </form> 
-            <h1 className={styles.username}>{data.users.username}'s Quests</h1>
+            <h1 className={styles.username}>{data.username}'s Quests</h1>
             <ul style={scrollbox} className={styles.info}>
-                {data.users.quests.map((quest, i) => {
+                {data.quest.map((quest, i) => {
                     return(
                         <li className={styles.levelup} style={{listStyleType: 'none'}} key={i}>
-                            {data.users.username} leveled up their {quest.stat} while {quest.type} for {quest.time} minutes
+                            {data.username} leveled up their {quest.stat} while {quest.kind} for {quest.total} minutes
                         </li>
                     )
                 })}
-            </ul>
+            </ul> 
             <Link to='/userdetails'>Profile</Link>
         </div>
     )
