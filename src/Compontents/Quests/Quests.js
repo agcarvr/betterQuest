@@ -5,7 +5,7 @@ import QuestTheme from '../../sounds/happy.mp3';
 import styles from './Quests.module.css';
 
 
-export default function Quest({data}){
+export default function Quest({data, makeAPICall}){
     // console.log(` users strength:${data.strength[0]} users wisdom:${data.users.wisdom} users endurance${data.users.endurance}`)
     
     //thanks
@@ -27,26 +27,58 @@ export default function Quest({data}){
       });
     
     
+    
 
     const handleChangeType = (e) => setTypeValue(e.target.value);
     const handleChangeTime = (e) => setTimeValue(e.target.value);
     const handleChangeStat = (e) => setStatValue(e.target.value);
 
-    // let newQuest = {
-    //     "type": typeValue,
-    //     "time": timeValue,
-    //     "stat": statValue,
-    // };
+ 
+      const updateStat = async (stat, time) => {
+        const body = {
+          "name": "https://betterquest-api.herokuapp.com/user/1/",
+          
+        }
+        if( time / 30 >= 40 ){
+          var newStat = 40
+        } else{
+          var newStat = Math.floor( time / 30 )
+        }
+        const stringStat = newStat.toString()
+        console.log("sting stat:" + stringStat, "new stat:" + newStat)
+        const oldStat = parseInt(data[stat][data[stat].length-1][stat])
+        body[stat] = (oldStat + newStat).toString()
+        // body[stat] = {
+        //     "name": "https://betterquest-api.herokuapp.com/user/1/",
+        //     stat: "20"
+        // }
+        try {
+          const res = await fetch(`https://betterquest-api.herokuapp.com/${stat}/`,{
+            method: 'POST',
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+          })
+          const data = await res.json()
+          console.log(data)
+          makeAPICall( )
+        } catch (error) {
+          console.log(error)
+        }
+      }
+    
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            setNewQuest({
-                name: 'https://betterquest-api.herokuapp.com/user/1/',
+        const body = {
+                'name': 'https://betterquest-api.herokuapp.com/user/1/',
                 "stat": statValue,
                 "total": timeValue,
                 "kind": typeValue
-            });
+        }
+        try {
             const response = await fetch(
               "https://betterquest-api.herokuapp.com/quest/",
               {
@@ -54,11 +86,13 @@ export default function Quest({data}){
                 headers: {
                   "Content-Type": "application/json"
                 },
-                body: JSON.stringify(newQuest)
+                body: JSON.stringify(body)
               }
             );
             const data = await response.json();
             // setTodos([..., data]);
+            updateStat(statValue,timeValue)
+            makeAPICall()
           } catch (error) {
             console.error(error);
           }

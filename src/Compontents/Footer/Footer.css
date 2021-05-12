@@ -20,8 +20,14 @@
 
 
 
-li{
+.footerbody{
+    background: rgb(251,180,97);
+    background: linear-gradient( rgba(251,180,97,1) 1%, rgba(247,122,158,1) 43%, rgba(81,55,112,1) 88%);
+}
+
+.footletts > li{
     justify-self: center;
     align-self: center;
     list-style-type: none;
+    margin: 10px 0px 10px 0px;
 }

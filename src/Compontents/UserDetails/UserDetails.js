@@ -21,9 +21,9 @@ export default function UserDetails(props) {
             <div className={styles.surrounding}>
             <h3><u className={styles.UserDetails}>Here are your current stats:</u></h3>
             
-            <p className={styles.UserGains}><b>Strength:</b> {props.request.strength[0].strength}</p>
-            <p className={styles.UserGains}><b>Endurance:</b> {props.request.endurance[0].endurance}</p>
-            <p className={styles.UserGains}><b>Wisdom:</b> {props.request.wisdom[0].wisdom}</p>
+            <p className={styles.UserGains}><b>Strength:</b> {props.request.strength[props.request.strength.length-1].strength}</p>
+            <p className={styles.UserGains}><b>Endurance:</b> {props.request.endurance[props.request.endurance.length-1].endurance}</p>
+            <p className={styles.UserGains}><b>Wisdom:</b> {props.request.wisdom[props.request.wisdom.length-1].wisdom}</p>
             <div className={styles.linkdivhome}>
             <Link to="/quests"><h3 className={styles.questlink}>Better Yourself Here</h3></Link>
             </div>
