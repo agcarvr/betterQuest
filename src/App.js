@@ -68,7 +68,7 @@ function App() {
       
         <Route path='/' exact render={() => <Home />}/>
         <Route path='/userdetails' render={() => <UserDetails request={request}/>}/>
-        <Route path='/quests' render={() => <Quest data={request}/>}/>
+        <Route path='/quests' render={() => <Quest data={request} makeAPICall={makeAPICall}/>}/>
         
       </main>
       <Footer/>
