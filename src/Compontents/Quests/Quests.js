@@ -44,14 +44,9 @@ export default function Quest({data, makeAPICall}){
         } else{
           var newStat = Math.floor( time / 30 )
         }
-        const stringStat = newStat.toString()
-        console.log("sting stat:" + stringStat, "new stat:" + newStat)
         const oldStat = parseInt(data[stat][data[stat].length-1][stat])
         body[stat] = (oldStat + newStat).toString()
-        // body[stat] = {
-        //     "name": "https://betterquest-api.herokuapp.com/user/1/",
-        //     stat: "20"
-        // }
+        
         try {
           const res = await fetch(`https://betterquest-api.herokuapp.com/${stat}/`,{
             method: 'POST',
